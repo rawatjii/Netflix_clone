@@ -18,9 +18,9 @@ function HeaderCompound({ children }) {
         <FeatureTitle className="feature-title-home">
           Unlimited movies, TV shows and more.
         </FeatureTitle>
-        <Warning>
+        {/* <Warning>
           This is NOT official Netflix
-        </Warning>
+        </Warning> */}
       </FeatureWrapper>
       {children}
     </HeaderWrapper>

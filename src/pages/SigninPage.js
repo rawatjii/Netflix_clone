@@ -16,7 +16,7 @@ import SignFormCaptcha from "../components/SignForm/SignFormCaptcha";
 import SignFormError from "../components/SignForm/SignFormError";
 import Warning from "../components/Header/Warning";
 
-function SigninPage() {
+const SigninPage = () => {
   const history = useHistory();
   const { firebase } = useContext(FirebaseContext);
 
@@ -26,7 +26,7 @@ function SigninPage() {
 
   const IsInvalid = password === "" || emailAddress === "";
 
-  function handleSubmit(event) {
+  const handleSubmit = (event) => {
     event.preventDefault();
 
     firebase
@@ -38,7 +38,7 @@ function SigninPage() {
         history.push("/browse");
       })
       .catch((error) => setError(error.message));
-  }
+  };
 
   return (
     <>
@@ -79,6 +79,6 @@ function SigninPage() {
       <FooterCompound />
     </>
   );
-}
+};
 
 export default SigninPage;
